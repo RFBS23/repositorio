@@ -1,0 +1,828 @@
+$negro: #111111;
+$blanco: #FEFEFE;
+$grisOscuro: #222222;
+$grisClaro: #C8C8C8;
+$grisClaroHover: #ACABAB;
+$azul: #3E60E9;
+$azulHover: #254BE6;
+$rojo: #e74545;
+$sombraDark: 10px 10px 20px rgba(170,170,170,.16);
+$sombraLight: 10px 10px 20px rgba(0,0,0,.16);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.modal-body::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    background: #F1F1F1;
+    transition: .6s ease all;
+    &.dark{
+        //aqui cabiamos el color
+        background: $negro;
+    }
+}
+
+strong{
+    color: $negro;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+h3{
+    color: $grisOscuro;
+    font-weight: 500;
+}
+
+p{
+    color: $grisOscuro;
+    font-weight: 500;
+}
+
+a{
+    color: $grisOscuro;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+li{
+    color: $grisOscuro;
+    text-decoration: none;
+    font-weight: 500;
+    button{
+        text-decoration: none;
+    }
+}
+
+h1{
+    color: $grisOscuro;
+    font-weight: 500;
+}
+
+h2{
+    color: $grisOscuro;
+    font-weight: 500;
+}
+
+.offcanvas .offcanvas-end{
+    color: $grisOscuro;
+    font-weight: 500;
+}
+h5{
+    color: $grisOscuro;
+    font-weight: 500;
+}
+
+button{
+    color: $grisOscuro;
+    text-decoration: none;
+    font-weight: 500;
+}
+//texto => cajadw
+.texto{
+    color: $azul;
+    text-decoration: none;
+    font-weight: 1000;
+}
+
+.img2{
+    display: none;
+}
+
+.inicio{
+    .contenedor-banner{
+        .contenedor-img{
+            .img2{
+                display: none;
+            }
+        }
+    }
+}
+
+.micontainer{
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    body.dark &{
+        background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38, .8));
+    }
+}
+
+//nav para modo negro
+div {
+    body.dark & {
+        color: $blanco;
+        h1 {
+            color: $blanco;
+        }
+        a {
+            color: $blanco;
+        }
+        h3{
+            color: $blanco;
+        }
+        p{
+            color: $blanco;
+        }
+        button{
+            color: $blanco;
+        }
+    }
+}
+.cajadw{
+    body.dark &{
+        .texto{
+            color: $rojo;
+        }
+        border: 2px solid $blanco;
+    }
+}
+.navbar-toggler{
+    body.dark &{
+        span{
+            color: $blanco;
+        }
+    }
+}
+.offcanvas{
+    body.dark & {
+        background: $grisOscuro;
+        box-shadow: $blanco;
+        //quiero que los enlaces tengan otro color (cuando esta en modo negro)
+        a {
+            color: $blanco;
+            text-decoration: none;
+            //que estos enlaces cuando tengan un hover cambien de color a blanco (x ejemplo)
+            &:hover {
+                color: $negro;
+            }
+        }
+        h5{
+            color: $blanco;
+        }
+        button{
+            color: $blanco;
+        }
+    }
+}
+
+.offcanvas-body{
+    body.dark & {
+        li{
+            a {
+                color: $blanco;
+                //que estos enlaces cuando tengan un hover cambien de color a blanco (x ejemplo)
+                &:hover {
+                    color: $negro;
+                }
+            }
+        }
+    }
+}
+
+//seccion inicio
+.inicio{
+    body.dark & {
+        background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)), url(../img/darkmode.png);
+        background-size: cover;
+        box-shadow: $blanco;
+        a {
+            color: $blanco;
+            //que estos enlaces cuando tengan un hover cambien de color a blanco (x ejemplo)
+            &:hover {
+                color: $negro;
+            }
+        }
+
+        h2{
+            color: $blanco;
+        }
+
+        .redsocial{
+            color: $blanco;
+        }
+
+        .contenedor-banner{
+            background-color: $rojo;
+        }
+
+        .redsocial a:hover{
+            background-color: $azul; //color q sale al pasar el cursor
+        }
+
+        .img1{
+            display: none;
+        }
+
+        .contenedor-banner{
+            .contenedor-img{
+                .img2{
+                    display: inline-block;
+                }
+            }
+        }
+
+    }
+}
+
+.sobremi{
+    background: linear-gradient(to top, rgba(238, 238, 238, .8), rgb(238, 238, 238, .8)), url(../img/dobremi.png);
+    background-size: cover;
+    .fila .col .contenedor-intereses .interes{
+        background-color: $rojo;
+    }
+    .fila .col .contenedor-intereses .interes:hover{
+        background-color: $azul;
+    }
+    body.dark & {
+        background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,.8)), url(../img/sobremi.png);
+        background-size: cover;
+        h2{
+            color: $blanco
+        }
+        .contenido-seccion p span{
+            color: $rojo;
+        }
+        .fila .col ul li{
+            color: $blanco;
+        }
+        .fila .col ul li strong{
+            color: $blanco;
+        }
+        .fila .col ul li span{
+            background-color: $azulHover;
+        }
+        .fila .col .contenedor-intereses .interes{
+            background-color: $azulHover;
+        }
+        .fila .col .contenedor-intereses .interes:hover{
+            background-color: $rojo;
+        }
+    }
+}
+.habilidades{
+    background: linear-gradient(to top, rgba(238, 238, 238, .8), rgb(238, 238, 238, .8)), url(../img/habiliwhite.png);
+    background-size: cover;
+    .progreso{
+        width: var(--w);
+        color: $blanco;
+        height: 100%;
+        background: $rojo;
+        border-radius: 10px;
+        animation:Aumentar 5s ease;
+    }
+    body.dark &{
+        background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,.8)), url(../img/habilidark.png);
+        background-size: cover;
+        h2{
+            color: $blanco;
+        }
+        .progreso{
+            width: var(--w);
+            color: $blanco;
+            height: 100%;
+            background: $azul;
+            border-radius: 10px;
+            animation:Aumentar 5s ease;
+        }
+    }
+}
+//seccion contacto
+.contacto{
+    background: linear-gradient(to top, rgba(238, 238, 238, .8), rgb(238, 238, 238, .8)), url(../img/ubidark.png);
+    background-size: cover;
+    h2{
+        color: $negro;
+    }
+    .col input, .col textarea{
+        background-color: $grisClaro;
+        border-color: $negro;
+        color: $negro;
+        font-size: 21px;
+    }
+    button{
+        background-color: $grisClaro;
+        border: 2px solid $negro;
+        font-size: 20px;
+    }
+    button .overlay{
+        color: $negro;
+        border-color: $negro;
+    }
+    .col .info{
+        background-color: $grisClaro;
+    }
+    .col .info ul li{
+        color: $negro;
+    }
+    body.dark & {
+        background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38, .8)), url(../img/ubiwhite.png);
+        background-size: cover;
+        color: $blanco;
+        h2{
+            color: $blanco;
+        }
+        .col .info{
+            background-color: $grisOscuro;
+        }
+        .col .info ul li{
+            color: $blanco;
+        }
+        .col input, .col textarea{
+            background-color: $grisOscuro;
+            color: $blanco;
+            border: none;
+        }
+        button{
+            background-color: transparent;
+            border: 2px solid $blanco;
+            font-size: 20px;
+        }
+    }
+}
+
+//nav
+.navbar {
+    background: $blanco;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: .6s ease all;
+    box-shadow: $sombraDark;
+    body.dark & {
+        background: $grisOscuro;
+        box-shadow: $sombraLight;
+        strong {
+            color: $blanco;
+        }
+        //quiero que los enlaces tengan otro color (cuando esta en modo negro)
+        a {
+            color: $blanco;
+            text-decoration: none;
+            //que estos enlaces cuando tengan un hover cambien de color a blanco (x ejemplo)
+            &:hover {
+                color: $negro;
+            }
+        }
+        div{
+            color: $blanco;
+            h5{
+                color: $blanco;
+            }
+            button{
+                color: $blanco;
+            }
+        }
+        .img1{
+            display: none;
+        }
+        .img2{
+            display: inline-flex;
+        }
+    }
+}
+//fin nav
+
+// modo oscuro
+.darkmode {
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    &::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: #ece8e87a;
+        top: 0;
+        left: 0;
+        right: unset;
+        border-radius: 100px;
+        transition: .6s ease all;
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+    &.active {
+        background: orange;
+        color: #000;
+        &::after {
+            right: 0;
+            left: unset;
+        }
+    }
+    span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: $blanco;
+    }
+}
+//fin modo oscuro
+
+/*para lo que es responsivo
+.navbar-toggler{
+    display: none;
+}*/
+
+.cajadw{
+    border: 2px solid $negro;
+    overflow: hidden;
+    position: relative;
+}
+
+/*seccion css*/
+.inicio{
+    background: linear-gradient(to top, rgba(238, 238, 238, .8), rgb(238, 238, 238, 1)), url(../img/whitemode.png);
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+    height: 100vh; //altura del card y el fondo
+    color: $blanco;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+.inicio .contenedor-banner{
+    background-color: $azulHover;
+    padding: 20px;
+    max-width: 350px;
+    text-align: center;
+    margin: auto;
+    text-align: center;
+    border-radius: 30px;//40
+}
+.inicio .contenedor-banner img{
+    margin-top: 40px;
+    border: 2px solid $negro; //borde de img
+    display: block;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+.inicio .contenedor-banner h1{
+    margin-top: 20px;
+    font-size: 40px;
+}
+.inicio .contenedor-banner h2{
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: normal;
+}
+.inicio .contenedor-banner .redsocial a{
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 12px 10px;
+    font-size: 20px;
+    transition: .3s;
+}
+.inicio .contenedor-banner .redsocial a:hover{
+    background-color: $rojo; //color q sale al pasar el cursor
+}
+
+//seccion sobre mi
+.sobremi{
+    //height: 170vh;//tamaño del fondo
+    padding: 50px 20px; //altura - ancho del margen
+    border-radius: 10px;
+}
+.sobremi .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.sobremi h2{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+.sobremi .contenido-seccion p{
+    text-align: justify;
+    font-size: 32px;
+    line-height: 39px; //altura de linea
+    margin-bottom: 20px; //boton de margen
+}
+.sobremi .contenido-seccion p span{
+    color: $azulHover;
+    font-weight: bold;
+}
+.sobremi .fila{
+    display: flex;
+}
+.sobremi .fila .col{
+    width: 50%;
+}
+.sobremi .fila .col h3{
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Signika Negative', sans-serif;
+    margin-bottom: 25px;
+}
+.sobremi .fila .col ul{
+    list-style: none;
+}
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+    font-size: 20px;
+}
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    width: 150px;
+}
+.sobremi .fila .col ul li span{
+    background-color: $rojo;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.sobremi .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;//para evitar los espacios 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.sobremi .fila .col .contenedor-intereses .interes{
+    width: 130px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 0 20px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+.sobremi .fila .col .contenedor-intereses .interes span{
+    text-align: center; //texto
+}
+
+.sobremi .fila .col .contenedor-intereses .interes img{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+//seccion habilidades
+.habilidades{
+    height: 96vh;//tamaño del fondo
+    padding: 50px 20px;
+}
+.habilidades .contenido-habilidad{
+    max-width: 1100px; //margen de habilidades
+    margin: auto;
+}
+.habilidades h2{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+.habilidades .fila{
+    display: flex;
+}
+.habilidades .fila .col{
+    width: 50%;
+    padding: 0 20px;
+}
+.habilidades .fila .col h3{
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+.habilidades .skill > span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+.habilidades .skill .barra{
+    width: 100%;
+    height: 20px;
+    position: relative;
+    margin-bottom: 30px;;
+    background: $grisClaroHover;
+    border-radius: 10px;
+    box-shadow: 2px 1px 10px #ffa43a;
+    overflow: hidden;//ocultar el desbordamiento
+    body.dark &{
+        box-shadow: 2px 1px 10px #f86f6f;
+    }
+}
+@keyframes Aumentar{
+    0%{width: 0%;}
+    100%{width: var(--w);}
+}
+
+
+//seccion contacto
+.contacto{
+    //height: 97vh;//tamaño del fondo
+    //background-image: url(../img/mundo.png);
+    padding: 50px 0;
+    border-radius: 10px;
+}
+.contacto .contact{
+    max-width: 1100px;
+    margin: auto;
+}
+.contacto h2{
+    font-size: 50px;
+    text-align: center;
+    padding: 20px 0;
+}
+.contacto .fila{
+    display: flex;
+}
+.contacto .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+/*
+.contacto .alerta{
+    width: 100%;
+    position: relative;
+}*/
+.contacto .col input, .contacto .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+.contacto button{
+    cursor: pointer;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    position: relative;
+    z-index: 10;
+}
+.contacto button .overlay{
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: $azul;
+    z-index: -1;
+    transition: 1s;
+}
+.contacto button:hover .overlay{
+    width: 100%;
+}
+.contacto .col iframe{
+    width: 100%;
+}
+.contacto .col img{
+    display: none;
+}
+.contacto .col .info{
+    display: none;
+}
+.contacto .col .info ul{
+    display: none;
+}
+.contacto .col .info ul li{
+    display: none;
+}
+.contacto .col .info ul li i{
+    display: none;
+}
+/*para quitar marca de 00webhost*/
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{
+    display: none;
+}
+//responsivo
+@media screen and (max-width: 1012px){
+    .micontainer{
+        width: 94%;
+        font-family: 'Ubuntu', sans-serif;
+        margin: 0 auto;
+        body.dark &{
+            background: none;
+        }
+    }
+    .inicio{
+        //height: 85vh; altura del card
+        background: none;
+        body.dark & {
+            background: none;
+        }
+    }
+
+    .sobremi{
+        background: none;
+        body.dark & {
+            background: none;
+        }
+    }
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+    .sobremi .fila .col ul li{
+        font-size: 17px;
+    }
+    .sobremi .fila .col ul li span{
+        padding: 5px;
+    }
+    .sobremi .contenido-seccion p{
+        text-align: justify;
+        font-size: 18px;
+        line-height: 22px; //altura de linea
+        margin-bottom: 20px; //boton de margen
+    }
+    .sobremi .fila .col .contenedor-intereses .interes{
+        width: 140px;
+        height: 120px;
+        border-radius: 10px;
+        margin: 0 20px 15px 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+    }
+
+    .habilidades{
+        background: none;
+        body.dark & {
+            background: none
+        }
+    }
+    .habilidades .fila{
+        display: block;
+    }
+    .habilidades .fila .col{
+        width: 100%;
+    }
+    .habilidades .fila .col .barra{
+        width: 100%;
+    }
+
+    .contacto{
+        background-image: none;
+        body.dark & {
+            background: none;
+        }
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+    .contacto .fila .col .info{
+        top: 50%;
+    }
+    .contacto .fila .col iframe{
+        display: none;
+    }
+    .contacto .col img{
+        display: inline;
+        width: 100%;
+    }
+    .contacto .col .info{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        padding: 20px;
+        width: 350px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .contacto .col .info ul{
+        display: inline-block;
+        list-style: none;
+        align-items: center;
+    }
+    .contacto .col .info ul li{
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    .contacto .col .info ul li i{
+        display: inline-block;
+        color: $azul;
+        margin-right: 20px;
+    }
+}
+/*fin*/
