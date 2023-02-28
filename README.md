@@ -2,7 +2,7 @@
 <h4>Lenguajes Utilizados:</h4>
 
 <h4 class="py-3">HTML</h4>
-<h4 class="py-3">Sass</h4>
+<h4 class="py-3">SCSS</h4>
 <h4 class="py-3">CSS</h4>
 <h4 class="py-3">BOOTSTRAP</h4>
 <h4 class="py-3">FONT AWESOME</h4>
