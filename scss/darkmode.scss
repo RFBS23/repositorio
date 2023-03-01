@@ -9,6 +9,7 @@ $rojo: #e74545;
 $naranjaneon: #ffa43a;
 $verdeneon: #20c67a;
 $transparentwhite: #ffffffcc;
+$azulneon: #f0376e;
 $transparente: #2c2828f2;
 $sombraDark: 10px 10px 20px rgba(170,170,170,.16);
 $sombraLight: 10px 10px 20px rgba(0,0,0,.16);
@@ -18,11 +19,16 @@ $sombraLight: 10px 10px 20px rgba(0,0,0,.16);
     margin: 0;
     box-sizing: border-box;
 }
-body::-webkit-scrollbar {
-    display: none;
+::-webkit-scrollbar {
+    width: 10px;
+    height: 1px;
 }
-.modal-body::-webkit-scrollbar {
-    display: none;
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent,$naranjaneon);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent,$verdeneon);
 }
 
 body{
@@ -111,10 +117,15 @@ button{
 }
 
 .micontainer{
-    box-sizing: border-box;
+    /*
+        box-sizing: border-box;
+        font-family: 'Ubuntu', sans-serif;
+        margin: 0;
+        padding: 0;
+    */
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: auto;
     body.dark &{
         background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38, .8));
     }
@@ -150,13 +161,6 @@ div {
             color: $rojo;
         }
         border: 2px solid $blanco;
-    }
-}
-.navbar-toggler{
-    body.dark &{
-        span{
-            color: $blanco;
-        }
     }
 }
 .offcanvas{
@@ -370,7 +374,11 @@ div {
     }
     a{
         color: $negro;
-        font-size: 18px;
+        font-size: 15px;
+        align-items: center;
+        &:hover {
+            color: $azulneon; //al hacer click en el enlace de los nav
+        }
     }
     body.dark & {
         background: $transparente;
@@ -382,11 +390,11 @@ div {
         a {
             color: $blanco; //colores del nav
             text-decoration: none;
-            font-size: 18px;
+            font-size: 15px;
             align-items: center;
             //que estos enlaces cuando tengan un hover cambien de color a blanco (x ejemplo)
             &:hover {
-                color: $negro;
+                color: $naranjaneon; //al hacer click en el enlace de los nav
             }
         }
         div{
@@ -464,6 +472,10 @@ header{
     top: 0;
     left: 0;
     z-index: 99;
+}
+
+.navegador2{
+    display: none;
 }
 
 .inicio{
@@ -734,11 +746,11 @@ img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhos
             background: none;
         }
     }
-    .navbar-toggler{
-        display: block;
-    }
-    .nav{
+    .navegador1{
         display: none;
+    }
+    .navegador2{
+        display: block;
     }
     .inicio{
         //height: 85vh; altura del card

@@ -4,12 +4,18 @@
   box-sizing: border-box;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar {
+  width: 10px;
+  height: 1px;
 }
 
-.modal-body::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #ffa43a);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #20c67a);
 }
 
 body {
@@ -92,10 +98,15 @@ button {
 }
 
 .micontainer {
-  box-sizing: border-box;
+  /*
+      box-sizing: border-box;
+      font-family: 'Ubuntu', sans-serif;
+      margin: 0;
+      padding: 0;
+  */
   font-family: "Ubuntu", sans-serif;
   margin: 0;
-  padding: 0;
+  padding: auto;
 }
 body.dark .micontainer {
   background: linear-gradient(to top, rgba(30, 35, 38, 0.8), rgba(30, 35, 38, 0.8));
@@ -128,10 +139,6 @@ body.dark .cajadw {
 }
 body.dark .cajadw .texto {
   color: #e74545;
-}
-
-body.dark .navbar-toggler span {
-  color: #FEFEFE;
 }
 
 body.dark .offcanvas {
@@ -321,7 +328,11 @@ body.dark .contacto button {
 }
 .navbar a {
   color: #111111;
-  font-size: 18px;
+  font-size: 15px;
+  align-items: center;
+}
+.navbar a:hover {
+  color: #f0376e;
 }
 body.dark .navbar {
   background: rgba(44, 40, 40, 0.9490196078);
@@ -333,11 +344,11 @@ body.dark .navbar strong {
 body.dark .navbar a {
   color: #FEFEFE;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   align-items: center;
 }
 body.dark .navbar a:hover {
-  color: #111111;
+  color: #ffa43a;
 }
 body.dark .navbar div {
   color: #FEFEFE;
@@ -408,6 +419,10 @@ header {
   top: 0;
   left: 0;
   z-index: 99;
+}
+
+.navegador2 {
+  display: none;
 }
 
 .inicio {
@@ -717,11 +732,11 @@ img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhos
   body.dark .micontainer {
     background: none;
   }
-  .navbar-toggler {
-    display: block;
-  }
-  .nav {
+  .navegador1 {
     display: none;
+  }
+  .navegador2 {
+    display: block;
   }
   .inicio {
     background: none;
