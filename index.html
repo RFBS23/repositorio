@@ -17,51 +17,31 @@
 <body>
   <div class="micontainer py-3">
     <!-- nav -->
-    <nav class="navbar shadow-lg fixed-top">
-      <div class="container-fluid">
-        <a href="#" class="d-flex align-items-center text-decoration-none">
-          <img class="img1 rounded-circle me-2" src="img/avatar/myAvatar1.png" alt="imagen1" width="32" height="32">
-          <img class="img2 rounded-circle me-2" src="img/avatar/myAvatar4.png" alt="imagen 2" width="32" height="32">
-          <strong style="text-decoration: none;">fabrizio</strong>
-        </a>
-        <button class="darkmode" id="darkmode">
-          <span><img src="img/iconos32/sol.png" alt="sol"></span>
-          <span><img src="img/iconos32/luna.png" alt="luna"></span>
-        </button> 
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
-          <span><i class="fa-solid fa-bars"></i></span>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Mi Perfil</h5>
-            <span style="cursor: pointer;"><i class="fa-regular fa-circle-xmark fa-2x" data-bs-dismiss="offcanvas" aria-label="Close"></i></span>
-          </div>
-          <div class="offcanvas-body text-center">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item py-2">
-                <a class="nav-link border rounded-5 btn btn-outline-primary" aria-current="page" href="#inicio">INICIO</a>
-              </li>
-              <li class="nav-item py-2">
-                <a class="nav-link border rounded-5 btn btn-outline-primary" aria-current="page" href="#sobremi">SOBRE MI</a>
-              </li>
-              <li class="nav-item py-2">
-                <a class="nav-link border rounded-5 btn btn-outline-primary" aria-current="page" href="#habilidades">MIS HABILIDADES</a>
-              </li>
-              <li class="nav-item py-2">
-                <a class="nav-link border rounded-5 btn btn-outline-primary" aria-current="page" href="#">CURRICULUM</a>
-              </li>
-              <li class="nav-item py-2">
-                <a class="nav-link border rounded-5 btn btn-outline-primary" href="#">PROYECTOS</a>
-              </li>
-              <li class="nav-item py-2">
-                <a class="nav-link border rounded-5 btn btn-outline-primary" href="#contacto">CONTACTO</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <header>
+      <nav class="navbar naveresponsive">
+        <div class="container-fluid">
+          <a href="#" class="d-flex align-items-center text-decoration-none me-3">
+            <img class="img1 rounded-circle me-2" src="img/avatar/myAvatar1.png" alt="imagen1" width="32" height="32">
+            <img class="img2 rounded-circle me-2" src="img/avatar/myAvatar4.png" alt="imagen 2" width="32" height="32">
+            <strong class="fw-semibold" style="text-decoration: none; font-size: 18px;">FABRIZIO</strong>
+          </a>
 
-      </div>
-    </nav>
+          <button class="darkmode" id="darkmode">
+            <span><img src="img/iconos32/sol.png" alt="sol"></span>
+            <span><img src="img/iconos32/luna.png" alt="luna"></span>
+          </button>
+
+          <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <a class="me-3 py-2 text-decoration-none fw-semibold" href="#inicio" class="nav-link">INICIO</a>
+            <a class="me-3 py-2 text-decoration-none fw-semibold" href="#sobremi" class="nav-link">SOBRE MI</a>
+            <a class="me-3 py-2 text-decoration-none fw-semibold" href="#habilidades" class="nav-link">MIS HABILIDADES</a>
+            <a class="me-3 py-2 text-decoration-none fw-semibold" href="#" class="nav-link">CURRICULUM</a>
+            <a class="me-3 py-2 text-decoration-none fw-semibold" href="#" class="nav-link">PROYECTOS</a>
+            <a class="me-3 py-2 text-decoration-none fw-semibold" href="#contacto" class="nav-link">CONTACTOS</a>
+          </nav>
+        </div>
+      </nav>
+    </header>
     <!--fin nav-->
 
     <!--inicio-->
@@ -304,15 +284,16 @@
     <section id="contacto" class="contacto">
       <div class="contact">
         <h2>Contacto</h2>
-        <div class="alerta" id="liveAlertPlaceholder"></div>
+        <div class="alert-danger" role="alert" id="liveAlertPlaceholder"></div>
+
         <div class="fila">
           <!--formulario-->
           <form class="col" id="form" action="">
             <input name="name" id="name" type="text" placeholder="Tu nombre" onkeypress="return SoloLetras(event);" required>
-            <input name="cel" type="text" id="telefono" type="text" placeholder="Numero de Telefono" onkeypress="return SoloNumeros(event);" maxlength="9" required>
+            <input name="cel" type="text" id="telefono" type="text" placeholder="Numero de Telefono" onkeypress="return SoloNumeros(event);" maxlength="9" required="9">
             <input name="email" id="email" type="text"  placeholder="Direccion de Correo" required>
             <textarea name="message" id="message" cols="30" placeholder="Mensaje" required></textarea>
-            <button type="submit" class="btn btn-outline" id="liveAlertBtn">Enviar Mensaje <i class="bi bi-send"></i><span class="overlay"></span></button>
+            <button type="submit" class="enviar btn btn-outline" id="liveAlertBtn">Enviar Mensaje <i class="bi bi-send"></i><span class="overlay"></span></button>
           </form>
           <a href="mailto:fabriziobarrios22@gmail.com" id="enviaremail"></a>
           <!--mapa-->
@@ -334,7 +315,6 @@
                 <li>
                   <i class="fa-brands fa-whatsapp"></i>
                   Escribeme:<a href="https://wa.me/51933103242?text=Hola%20"> haz click WSP</a>
-                  
                 </li>
               </ul>
             </div>
@@ -374,6 +354,7 @@
 
   <script src="js/darkmode.js"></script>
   <script src="js/formulario.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
