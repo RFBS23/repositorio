@@ -119,6 +119,9 @@ body.dark div p {
 body.dark div button {
   color: #FEFEFE;
 }
+body.dark div .alert-danger {
+  color: #20c67a;
+}
 
 body.dark .cajadw {
   border: 2px solid #FEFEFE;
@@ -304,7 +307,7 @@ body.dark .contacto button {
 }
 
 .navbar {
-  background: #FEFEFE;
+  background: rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -313,8 +316,15 @@ body.dark .contacto button {
   transition: 0.6s ease all;
   box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
 }
+.navbar strong {
+  color: #111111;
+}
+.navbar a {
+  color: #111111;
+  font-size: 18px;
+}
 body.dark .navbar {
-  background: #222222;
+  background: rgba(44, 40, 40, 0.9490196078);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
 }
 body.dark .navbar strong {
@@ -323,6 +333,8 @@ body.dark .navbar strong {
 body.dark .navbar a {
   color: #FEFEFE;
   text-decoration: none;
+  font-size: 18px;
+  align-items: center;
 }
 body.dark .navbar a:hover {
   color: #111111;
@@ -383,10 +395,6 @@ body.dark .navbar .img2 {
   color: #FEFEFE;
 }
 
-/*para lo que es responsivo
-.navbar-toggler{
-    display: none;
-}*/
 .cajadw {
   border: 2px solid #111111;
   overflow: hidden;
@@ -394,11 +402,19 @@ body.dark .navbar .img2 {
 }
 
 /*seccion css*/
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
 .inicio {
   background: linear-gradient(to top, rgba(238, 238, 238, 0.8), rgb(238, 238, 238)), url(../img/whitemode.png);
   background-size: cover;
   font-family: "Ubuntu", sans-serif;
-  height: 100vh;
+  height: 101vh;
   color: #FEFEFE;
   display: flex;
   align-items: center;
@@ -547,7 +563,6 @@ body.dark .navbar .img2 {
 }
 
 .habilidades {
-  height: 96vh;
   padding: 50px 20px;
 }
 
@@ -630,11 +645,6 @@ body.dark .habilidades .skill .barra {
   position: relative;
 }
 
-/*
-.contacto .alerta{
-    width: 100%;
-    position: relative;
-}*/
 .contacto .col input, .contacto .col textarea {
   display: block;
   width: 100%;
@@ -706,6 +716,12 @@ img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhos
   }
   body.dark .micontainer {
     background: none;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+  .nav {
+    display: none;
   }
   .inicio {
     background: none;

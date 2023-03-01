@@ -6,6 +6,10 @@ $grisClaroHover: #ACABAB;
 $azul: #3E60E9;
 $azulHover: #254BE6;
 $rojo: #e74545;
+$naranjaneon: #ffa43a;
+$verdeneon: #20c67a;
+$transparentwhite: #ffffffcc;
+$transparente: #2c2828f2;
 $sombraDark: 10px 10px 20px rgba(170,170,170,.16);
 $sombraLight: 10px 10px 20px rgba(0,0,0,.16);
 
@@ -134,6 +138,9 @@ div {
         }
         button{
             color: $blanco;
+        }
+        .alert-danger{
+            color: #20c67a;
         }
     }
 }
@@ -348,10 +355,9 @@ div {
         }
     }
 }
-
 //nav
 .navbar {
-    background: $blanco;
+    background: $transparentwhite;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -359,16 +365,25 @@ div {
     border-radius: 5px;
     transition: .6s ease all;
     box-shadow: $sombraDark;
+    strong {
+        color: $negro;
+    }
+    a{
+        color: $negro;
+        font-size: 18px;
+    }
     body.dark & {
-        background: $grisOscuro;
+        background: $transparente;
         box-shadow: $sombraLight;
         strong {
             color: $blanco;
         }
         //quiero que los enlaces tengan otro color (cuando esta en modo negro)
         a {
-            color: $blanco;
+            color: $blanco; //colores del nav
             text-decoration: none;
+            font-size: 18px;
+            align-items: center;
             //que estos enlaces cuando tengan un hover cambien de color a blanco (x ejemplo)
             &:hover {
                 color: $negro;
@@ -432,13 +447,9 @@ div {
         background: none;
         color: $blanco;
     }
+    
 }
 //fin modo oscuro
-
-/*para lo que es responsivo
-.navbar-toggler{
-    display: none;
-}*/
 
 .cajadw{
     border: 2px solid $negro;
@@ -447,11 +458,19 @@ div {
 }
 
 /*seccion css*/
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
 .inicio{
     background: linear-gradient(to top, rgba(238, 238, 238, .8), rgb(238, 238, 238, 1)), url(../img/whitemode.png);
     background-size: cover;
     font-family: 'Ubuntu', sans-serif;
-    height: 100vh; //altura del card y el fondo
+    height: 101vh; //altura del card y el fondo
     color: $blanco;
     display: flex;
     align-items: center;
@@ -583,7 +602,7 @@ div {
 
 //seccion habilidades
 .habilidades{
-    height: 96vh;//tamaño del fondo
+    //height: 96vh;//tamaño del fondo
     padding: 50px 20px;
 }
 .habilidades .contenido-habilidad{
@@ -654,11 +673,6 @@ div {
     padding: 10px;
     position: relative;
 }
-/*
-.contacto .alerta{
-    width: 100%;
-    position: relative;
-}*/
 .contacto .col input, .contacto .col textarea{
     display: block;
     width: 100%;
@@ -719,6 +733,12 @@ img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhos
         body.dark &{
             background: none;
         }
+    }
+    .navbar-toggler{
+        display: block;
+    }
+    .nav{
+        display: none;
     }
     .inicio{
         //height: 85vh; altura del card
