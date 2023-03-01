@@ -2,17 +2,18 @@
 <h4>Lenguajes Utilizados:</h4>
 
 <h4 class="py-3">HTML</h4>
-<h4 class="py-3">SCSS</h4>
+<h4 class="py-3">Sass</h4>
 <h4 class="py-3">CSS</h4>
 <h4 class="py-3">BOOTSTRAP</h4>
 <h4 class="py-3">FONT AWESOME</h4>
 <h4 class="py-3">unDraw</h4>
 <h4 class="py-3">FIGMA</h4>
 <h4 class="py-3">FLATICON</h4>
+<h4 class="py-3">SweetAlert2</h4>
 <br>
 Puedes Visualizarlo en los siguientes enlaces: 
 <h3 class="py-4">GITHUB</h3>
-<a href="https://github.com/fabriziobarriossaavedra/repositorio" title="Ver Proyecto rounded-3">🙂 GIT HUB</a>
+<a href="https://fabriziobarriossaavedra.github.io/repositorio/" title="Ver Proyecto rounded-3">🙂 GIT HUB</a>
 
 <h3 class="py-4">VERCEL</h3>
 <a href="https://rfbs-repositorio.vercel.app/" title="Ver Proyecto">🙂 VERCEL APP</a>    
