@@ -7,7 +7,16 @@ const $form = document.querySelector('#form')
         event.preventDefault()
         const form = new FormData(this)
         $buttonMailto.setAttribute('href', `mailto:fabriziobarrios22@gmail.com.com?subject=nombre ${form.get('name')}  correo ${form.get('email')}&body=${form.get('message')}`)
-        $buttonMailto.click()
+        $buttonMailto.click(
+            Swal.fire({
+                title: '<i class="fa-solid fa-circle-exclamation fa-xl"></i> muy bien',
+                background: '#fe9393',
+                confirmButtonColor: '#759eff',
+                backdrop: false,
+                timer: 5000,
+                timerProgressBar: true
+            })
+        )
     }
 
 //validacion de numeros
@@ -23,7 +32,14 @@ function SoloNumeros(evt) {
         return true;
     }
     else {
-        alert("Ingresar solo numeros");
+        Swal.fire({
+            title: '<i class="fa-solid fa-circle-exclamation fa-xl"></i> Ingresar solo numeros</span>',
+            background: '#fe9393',
+            confirmButtonColor: '#759eff',
+            backdrop: false,
+            timer: 5000,
+            timerProgressBar: true
+        });
         return false;
     }
 }
@@ -44,35 +60,14 @@ function SoloLetras(e) {
     }
 
     if (letras.indexOf(tecla) == -1 && !tecla_especial) {
-        alert("Ingresar solo letras");
+        Swal.fire({
+            title: '<i class="fa-solid fa-circle-exclamation fa-xl"></i> Ingresar solo letras',
+            background: '#fe9393',
+            confirmButtonColor: '#759eff',
+            backdrop: false,
+            timer: 5000,
+            timerProgressBar: true
+        });
         return false;
     }
 }
-
-//alerta
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-
-const alert = (message, type) => {
-  const wrapper = document.createElement('div')
-  wrapper.innerHTML = [
-    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-    `<div>${message}</div>`,
-    '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="position: absolute; right: 0px; border:transparent; top: 50%; transform: translateX(-60%) translateY(-80%) rotate(-90deg); padding: 20px 18px; cursor: pointer;"></button>',
-    '</div>'
-  ].join('')
-
-  alertPlaceholder.append(wrapper)
-}
-
-const alertTrigger = document.getElementById('liveAlertBtn')
-if (alertTrigger) {
-  alertTrigger.addEventListener('click', () => {
-    alert('<i class="fa-solid fa-thumbs-up"></i> Muy Bien, Revisare los correo y me contactare con usted', 'primary')
-  })
-}
-const alertTrigge = document.getElementById('liveAlertBtn')
- if (alertTrigger) {
-    alertTrigger.addEventListener('click', () => {
-      alert('<i class="fa-solid fa-thumbs-up"></i> Por Favor, ingrese los datos', 'danger')
-    })
-  }
