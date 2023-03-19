@@ -13,7 +13,7 @@
 <br>
 Puedes Visualizarlo en los siguientes enlaces: 
 <h3 class="py-4">GITHUB</h3>
-<a href="https://fabriziobarriossaavedra.github.io/repositorio/" title="Ver Proyecto rounded-3">🙂 GIT HUB</a>
+<a href="https://rfbs23.github.io/repositorio/" title="Ver Proyecto rounded-3">🙂 GIT HUB</a>
 
 <h3 class="py-4">VERCEL</h3>
 <a href="https://rfbs-repositorio.vercel.app/" title="Ver Proyecto">🙂 VERCEL APP</a>    
